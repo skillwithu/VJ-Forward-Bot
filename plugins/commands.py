@@ -20,11 +20,20 @@ START_TIME = time.time()
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-main_buttons = [[
-    InlineKeyboardButton('💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🧣', url='https://t.me/staystrongbros')
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+main_buttons = InlineKeyboardMarkup([[
+    InlineKeyboardButton('💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ 💻', url='https://t.me/staystrongbros')
 ],[
     InlineKeyboardButton('⚙ sᴇᴛᴛɪɴɢs', callback_data='settings#main')
-]]
+]])
+
+await bot.send_photo(
+    chat_id=message.chat.id,
+    photo='https://i.postimg.cc/43GKHS1c/c78f47eb1be7788ebe3f60079d6cbe40.jpg',
+    caption="✨ **Welcome to the Bot!**\n\nChoose an option below:",
+    reply_markup=main_buttons
+)
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
 # Ask Doubt on telegram @KingVJ01
